@@ -1,0 +1,32 @@
+name: ASP.NET Core CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+    - name: Build and test
+      run: |
+        dotnet build --configuration Release
+        dotnet test test/ReadingTimeDemo.UnitTests --configuration Release
+        dotnet publish src/ReadingTimeDemo --configuration Release --no-build --no-restore
+    - name: Publish and deploy
+      run: |
+        docker build --file src/ReadingTimeDemo/Dockerfile -t docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest src/ReadingTimeDemo/
+        docker login docker.pkg.github.com -u bas -p ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
+        docker push docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest  
+    - uses: azure/actions/login@master
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}     
+    - uses: azure/appservice-actions/webapp-container@master
+      with:
+        app-name: 'ReadingTimeDemoDreamlifter'
+        images: 'docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest'
