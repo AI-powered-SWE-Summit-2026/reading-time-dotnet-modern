@@ -28,6 +28,6 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}     
     - uses: azure/appservice-actions/webapp-container@master
       with:
-        app-name: 'ReadingTimeDemoDreamlifter'
+        app-name: ${{ secrets.AZURE_APP_NAME }}
         images: 'docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest'
         # https://readingtimedemodreamlifter.azurewebsites.net/
