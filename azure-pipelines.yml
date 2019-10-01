@@ -15,17 +15,6 @@ steps:
     command: restore
     projects: '**/*.csproj'
 
-- task: SonarSource.sonarqube.15B84CA1-B62F-4A2A-A403-89B77A063157.SonarQubePrepare@4
-  displayName: 'Prepare analysis on SonarQube'
-  inputs:
-    SonarQube: SonarQube
-    projectKey: 'reading-time-demo-dotnet'
-    projectName: ReadingTimedotnet
-    extraProperties: |
-     sonar.exclusions=**/wwwroot/**/*,/Project_Readme.html
-     sonar.cs.opencover.reportsPaths=$(System.DefaultWorkingDirectory)/test/ReadingTimeDemo.UnitTests/coverage.*.xml
-     
-
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
@@ -38,13 +27,7 @@ steps:
     command: test
     projects: '**/*[Tt]ests/*.csproj'
     arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-
-- task: SonarSource.sonarqube.6D01813A-9589-4B15-8491-8164AEB38055.SonarQubeAnalyze@4
-  displayName: 'Run Code Analysis'
-
-- task: SonarSource.sonarqube.291ed61f-1ee4-45d3-b1b0-bf822d9095ef.SonarQubePublish@4
-  displayName: 'Publish Quality Gate Result'
-  
+ 
 - task: DotNetCoreCLI@2
   displayName: Publish
   inputs:
