@@ -18,16 +18,49 @@ jobs:
         dotnet build --configuration Release
         dotnet test test/ReadingTimeDemo.UnitTests --configuration Release
         dotnet publish src/ReadingTimeDemo --configuration Release --no-build --no-restore
-    - name: Publish and deploy
+    - name: Create deployment
+      uses: bas/create-deployment@v1
+      id: deployment
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        ref: ${{ github.ref }}
+        required_contexts: "[]"
+        environment: "review"
+    - name: Set deployment status to pending
+      uses: bas/create-deployment-status@v1
+      with: 
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        state: "pending"
+    - name: Build and publish container
       run: |
         docker build --file src/ReadingTimeDemo/Dockerfile -t docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest src/ReadingTimeDemo/
         docker login docker.pkg.github.com -u bas -p ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
         docker push docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest  
-    - uses: azure/actions/login@master
+    - name: Login to Azure
+      uses: azure/actions/login@master
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}     
-    - uses: azure/appservice-actions/webapp-container@master
+    - name: Deploy
+      uses: azure/appservice-actions/webapp-container@master
       with:
         app-name: ${{ secrets.AZURE_APP_NAME }}
         images: 'docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest'
         # https://readingtimedemodreamlifter.azurewebsites.net/
+    - name: Update deployment status to success
+      uses: bas/create-deployment-status@v1
+      with: 
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        state: "success"
+        environment: "review"
+        target_url: "https://readingtimedemodreamlifter.azurewebsites.net/"
+    - name: Update deployment status to failure
+      uses: bas/create-deployment-status@v1
+      if: failure()
+      with: 
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+        state: "failure" 
+        environment: "review"
+        target_url: "https://readingtimedemodreamlifter.azurewebsites.net/"
