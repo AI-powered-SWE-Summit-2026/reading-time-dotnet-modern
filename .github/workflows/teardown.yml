@@ -20,7 +20,7 @@ jobs:
         
     - name: Destroy resource group
       if: github.event_name == 'pull_request' && github.event.action == 'closed'
-      run: az group delete -n $RESOURCE_GROUP --yes
+      run: az group delete -n $RESOURCE_GROUP --yes --no-wait
     
     - name: logout
       run: az logout
