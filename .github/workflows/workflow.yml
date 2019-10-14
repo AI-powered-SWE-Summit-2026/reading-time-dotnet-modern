@@ -1,52 +1,73 @@
-name: ASP.NET Core CI
+name: Build test and deploy review app
 
-on: [push]
+on: pull_request
 
 jobs:
-  build:
 
-    runs-on: ubuntu-latest
-    
+  build:
+    env: 
+      RESOURCE_GROUP: ${{ github.actor }}-readingtimedemo-grp
+
+    runs-on: ubuntu-latest   
     steps:
+    
     - uses: actions/checkout@v1
+        
+    - name: Get branch name from pulls ref
+      uses: bas/get-branch-name@v1
+      id: branch
+            
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
+
+    - name: Login to Azure
+      uses: azure/actions/login@master
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Create webapp
+      if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened')
+      run: |
+        az group create -l $LOCATION -n $RESOURCE_GROUP
+        az appservice plan create -g $RESOURCE_GROUP -n $PLAN_NAME --is-linux --sku $SKU
+        az webapp create -g $RESOURCE_GROUP -p $PLAN_NAME -n $APP_NAME --runtime "DOTNETCORE|2.2"
+      env:
+        PLAN_NAME: ${{ github.actor }}-readingtimedemo-plan
+        APP_NAME: ${{ github.actor }}-readingtimedemo-app 
+        LOCATION: westeurope
+        SKU: B1
+    
     - name: Build and test
       run: |
         dotnet build --configuration Release
         dotnet test test/ReadingTimeDemo.UnitTests --configuration Release
-        dotnet publish src/ReadingTimeDemo --configuration Release --no-build --no-restore
+        dotnet publish src/ReadingTimeDemo --configuration Release -o ReadingTimeDemo --no-build --no-restore
+
     - name: Create deployment
       uses: bas/create-deployment@v1
       id: deployment
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        ref: ${{ github.ref }}
+        ref: ${{ steps.branch.outputs.ref }}
         required_contexts: "[]"
         environment: "review"
+
     - name: Set deployment status to pending
       uses: bas/create-deployment-status@v1
       with: 
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}
         state: "pending"
-    - name: Build and publish container
-      run: |
-        docker build --file src/ReadingTimeDemo/Dockerfile -t docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest src/ReadingTimeDemo/
-        docker login docker.pkg.github.com -u bas -p ${{ secrets.GITHUB_PACKAGE_REGISTRY_TOKEN }}
-        docker push docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest  
-    - name: Login to Azure
-      uses: azure/actions/login@master
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}     
+
     - name: Deploy
-      uses: azure/appservice-actions/webapp-container@master
-      with:
-        app-name: ${{ secrets.AZURE_APP_NAME }}
-        images: 'docker.pkg.github.com/octodemo/readingtimedemo/readingtimedemo:latest'
-        # https://readingtimedemodreamlifter.azurewebsites.net/
+      id: azure
+      uses: azure/webapps-deploy@v1
+      with: 
+        app-name: ${{ github.actor }}-readingtimedemo-app
+        package: './src/ReadingTimeDemo/ReadingTimeDemo' 
+ 
     - name: Update deployment status to success
       uses: bas/create-deployment-status@v1
       with: 
@@ -54,7 +75,8 @@ jobs:
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}
         state: "success"
         environment: "review"
-        target_url: "https://readingtimedemodreamlifter.azurewebsites.net/"
+        target_url: ${{ steps.azure.outputs.webapp-url }}
+  
     - name: Update deployment status to failure
       uses: bas/create-deployment-status@v1
       if: failure()
@@ -63,4 +85,6 @@ jobs:
         deployment_id: ${{ steps.deployment.outputs.deployment_id }}
         state: "failure" 
         environment: "review"
-        target_url: "https://readingtimedemodreamlifter.azurewebsites.net/"
+     
+    - name: logout
+      run: az logout
