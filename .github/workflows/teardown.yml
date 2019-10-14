@@ -1,0 +1,26 @@
+name: Delete Azure resources
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+
+  teardown:
+    env: 
+      RESOURCE_GROUP: ${{ github.actor }}-readingtimedemo-grp
+
+    runs-on: ubuntu-latest   
+    steps:
+    
+    - name: Login to Azure
+      uses: azure/actions/login@master
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Destroy resource group
+      if: github.event_name == 'pull_request' && github.event.action == 'closed'
+      run: az group delete -n $RESOURCE_GROUP --yes
+    
+    - name: logout
+      run: az logout
