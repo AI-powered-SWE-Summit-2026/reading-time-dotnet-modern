@@ -6,6 +6,7 @@ $body = @{
     ref         = $Env:BUILD_SOURCEBRANCHNAME
     description = "Deploying branch to development"
     environment = "development"
+    required_contexts = @()
 }
 
 $json = $body | ConvertTo-Json
