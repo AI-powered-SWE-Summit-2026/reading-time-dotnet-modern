@@ -15,7 +15,13 @@
       "description": "Upgrade the ReadingTimeDemo project from netcoreapp2.0 to .NET 10 LTS, updating all project files, NuGet packages, and source code to be compatible with the modern runtime.",
       "reason": "The project targets netcoreapp2.0, which is end-of-life and no longer receives security updates. Several NuGet packages are deprecated or incompatible with newer .NET versions, and source code (Program.cs, Startup.cs) uses obsolete hosting APIs that must be modernized. This upgrade is a prerequisite for all subsequent Azure service migrations.",
       "requirements": "Upgrade target framework from netcoreapp2.0 to net10.0 for both src/ReadingTimeDemo and test/ReadingTimeDemo.UnitTests projects. Update or remove NuGet packages that are now included in the framework reference (e.g., Microsoft.AspNetCore.* packages). Resolve source incompatibilities in Program.cs and Startup.cs by adopting the modern minimal hosting model (WebApplication.CreateBuilder). Replace deprecated packages with their supported equivalents. Ensure the project builds and all existing tests pass after the upgrade. Addresses assessment issues: Out of support .NET target framework is detected, NuGet package functionality is included with framework reference, Project's target framework(s) needs to be changed, Source incompatible for selected .NET version, NuGet package upgrade is recommended, Behavioral change in selected .NET version, NuGet package is deprecated, Local or network IO operations detected (Directory.GetCurrentDirectory() is resolved as part of the modern hosting refactor).",
-      "status": "started",
+      "status": "success",
+      "taskSummary": "Upgraded from netcoreapp2.0 to net10.0. Rewrote Program.cs using minimal hosting model (WebApplication.CreateBuilder), deleted Startup.cs. Removed 11 framework-included NuGet packages, updated ApplicationInsights to 2.22.0, updated test project packages. Build passes with 0 errors/warnings. 14/14 unit tests pass.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
       "successCriteria": {
         "passBuild": "true",
         "generateNewUnitTests": "false",
@@ -35,6 +41,13 @@
           "location": "builtin"
         }
       ],
+      "status": "success",
+      "taskSummary": "Added Azure App Configuration SDK provider (Microsoft.Extensions.Configuration.AzureAppConfiguration v8.5.0 and Microsoft.Azure.AppConfiguration.AspNetCore v8.5.0) with DefaultAzureCredential (Managed Identity). Program.cs conditionally wires the provider when AZURE_APP_CONFIGURATION_ENDPOINT env var is set; falls back to appsettings.json + env vars when not set. Emitted .azure/configuration-migration.json seed file (empty keyValues — only settings present were Logging (runtime-host concern, excluded) and ApplicationInsights:InstrumentationKey (API key, excluded per skill guidance)). IConfiguration/IOptions<T> shape unchanged. Build: 0 errors, 0 warnings. Tests: 14/14 passed.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
       "successCriteria": {
         "passBuild": "true",
         "generateNewUnitTests": "false",
@@ -54,6 +67,7 @@
           "location": "builtin"
         }
       ],
+      "status": "started",
       "successCriteria": {
         "passBuild": "true",
         "generateNewUnitTests": "false",
