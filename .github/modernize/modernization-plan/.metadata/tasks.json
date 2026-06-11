@@ -34,7 +34,9 @@
       "description": "Migrate non-secret application settings from appsettings.json to Azure App Configuration, so the application reads its configuration from a centralized, cloud-managed store at runtime.",
       "reason": "The application currently reads configuration exclusively from local appsettings.json files, which is a cloud-readiness concern flagged by the assessment. Externalizing configuration to Azure App Configuration enables environment-agnostic deployments, centralized management, and reduces configuration drift across environments.",
       "requirements": "Move non-secret settings from appsettings.json (and appsettings.{Environment}.json if present) into Azure App Configuration. Preserve the existing IConfiguration / IOptions<T> shape so that consuming code requires no changes. Use Managed Identity for authentication to Azure App Configuration. Emit a .azure/configuration-migration.json seed file for the deployment agent to use when provisioning the App Configuration store. Ensure environment variables remain as a fallback configuration source. Addresses assessment issues: Local application configuration detected.",
-      "dependencies": ["001-upgrade-dotnet"],
+      "dependencies": [
+        "001-upgrade-dotnet"
+      ],
       "skills": [
         {
           "name": "migration-local-appsettings-azure-app-configuration",
@@ -42,7 +44,7 @@
         }
       ],
       "status": "success",
-      "taskSummary": "Added Azure App Configuration SDK provider (Microsoft.Extensions.Configuration.AzureAppConfiguration v8.5.0 and Microsoft.Azure.AppConfiguration.AspNetCore v8.5.0) with DefaultAzureCredential (Managed Identity). Program.cs conditionally wires the provider when AZURE_APP_CONFIGURATION_ENDPOINT env var is set; falls back to appsettings.json + env vars when not set. Emitted .azure/configuration-migration.json seed file (empty keyValues — only settings present were Logging (runtime-host concern, excluded) and ApplicationInsights:InstrumentationKey (API key, excluded per skill guidance)). IConfiguration/IOptions<T> shape unchanged. Build: 0 errors, 0 warnings. Tests: 14/14 passed.",
+      "taskSummary": "Added Azure App Configuration SDK provider (Microsoft.Extensions.Configuration.AzureAppConfiguration v8.5.0 and Microsoft.Azure.AppConfiguration.AspNetCore v8.5.0) with DefaultAzureCredential (Managed Identity). Program.cs conditionally wires the provider when AZURE_APP_CONFIGURATION_ENDPOINT env var is set; falls back to appsettings.json + env vars when not set. Emitted .azure/configuration-migration.json seed file (empty keyValues \u2014 only settings present were Logging (runtime-host concern, excluded) and ApplicationInsights:InstrumentationKey (API key, excluded per skill guidance)). IConfiguration/IOptions<T> shape unchanged. Build: 0 errors, 0 warnings. Tests: 14/14 passed.",
       "successCriteriaStatus": {
         "passBuild": "true",
         "generateNewUnitTests": "false",
@@ -60,14 +62,16 @@
       "description": "Migrate static web content (images, CSS, JavaScript) from the local wwwroot directory to Azure Blob Storage, and update the application to serve these assets from blob storage.",
       "reason": "The application currently bundles static content in the container image (wwwroot), which is flagged as a cloud-readiness concern. Serving static assets from Azure Blob Storage improves scalability, reduces container image size, and enables CDN-backed delivery.",
       "requirements": "Move static assets from wwwroot to an Azure Blob Storage container. Update the application to reference assets from Azure Blob Storage URLs instead of local paths. Use Managed Identity (DefaultAzureCredential) for authentication to Azure Blob Storage. Ensure existing views and controllers that reference static content are updated accordingly. Addresses assessment issues: Static content detected.",
-      "dependencies": ["001-upgrade-dotnet"],
+      "dependencies": [
+        "001-upgrade-dotnet"
+      ],
       "skills": [
         {
           "name": "migration-azure-storage-blob",
           "location": "builtin"
         }
       ],
-      "status": "started",
+      "status": "done",
       "successCriteria": {
         "passBuild": "true",
         "generateNewUnitTests": "false",
