@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@inject ReadingTimeDemo.Services.IBlobStorageService BlobStorageService
+@*
+    Static Asset Delivery Strategy:
+    - Framework/vendor libraries (Bootstrap, jQuery): served from local wwwroot in Development,
+      and from CDN in Staging/Production. These are stable, versioned libraries that do not
+      require blob storage hosting.
+    - Application-specific assets (site.css, site.js, images): served from Azure Blob Storage
+      in all environments, authenticated via DefaultAzureCredential (Managed Identity).
+    - Note: asp-append-version="true" is not used for blob storage URLs because the ASP.NET Core
+      tag helper cannot hash remote content. Cache invalidation for blob assets should be managed
+      at the CDN or blob storage level (e.g., versioned container paths, ETag/Last-Modified headers).
+*@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,13 +18,13 @@
     <title>@ViewData["Title"] - It's Reading Time!</title>
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="@BlobStorageService.GetStaticAssetUrl("css/site.css")" />
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="@BlobStorageService.GetStaticAssetUrl("css/site.min.css")" />
     </environment>
     <style>
         .navbar {
@@ -60,7 +72,7 @@
     <div class="container body-content">
         @RenderBody()
         <footer  class="container-fluid text-center navbar-fixed-bottom">
-            <p>From <img class="emoji" src="/images/octocat.png" /> with <img class="emoji" src="/images/heart.png" /></p>
+            <p>From <img class="emoji" src="@BlobStorageService.GetStaticAssetUrl("images/octocat.png")" /> with <img class="emoji" src="@BlobStorageService.GetStaticAssetUrl("images/heart.png")" /></p>
             <form class="form-inline">
                 Get favorites:
                 <input type="email" class="form-control" size="50" placeholder="Email Address"></input>
@@ -72,7 +84,7 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="@BlobStorageService.GetStaticAssetUrl("js/site.js")"></script>
     </environment>
     <environment names="Staging,Production">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
@@ -83,7 +95,7 @@
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="@BlobStorageService.GetStaticAssetUrl("js/site.min.js")"></script>
     </environment>
 
     @RenderSection("scripts", required: false)

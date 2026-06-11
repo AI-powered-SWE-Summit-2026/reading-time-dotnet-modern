@@ -1,5 +1,6 @@
 ﻿@using ReadingTimeDemo.Models
 @model List<Book>
+@inject ReadingTimeDemo.Services.IBlobStorageService BlobStorageService
 @{
     ViewData["Title"] = "It's Reading Time!";
 }
@@ -18,7 +19,7 @@
                         <tr>
                             <td class="col-sm-8 col-md-6">
                                 <div class="media">
-                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="~/images/covers/@item.Cover" style="width: 72px; height: 72px;" /></a>
+                                    <a class="thumbnail pull-left" href="#"> <img class="media-object" src="@BlobStorageService.GetStaticAssetUrl("images/covers/" + item.Cover)" style="width: 72px; height: 72px;" /></a>
                                     <div class="media-body">
                                         <h4 class="media-heading"><a href="#">@item.Title</a></h4>
                                         <h5 class="media-heading"> by <a href="#">@item.Author</a></h5>

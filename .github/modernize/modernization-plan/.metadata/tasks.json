@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Tasks template for modernization plan. Generate this file alongside plan.md to track individual migration tasks.",
+  "metadata": {
+    "planName": "modernization-plan",
+    "projectName": "ReadingTimeDemo",
+    "language": "dotnet",
+    "createdAt": "2026-06-11T11:55:30.272+02:00",
+    "version": "1.0"
+  },
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet",
+      "description": "Upgrade the ReadingTimeDemo project from netcoreapp2.0 to .NET 10 LTS, updating all project files, NuGet packages, and source code to be compatible with the modern runtime.",
+      "reason": "The project targets netcoreapp2.0, which is end-of-life and no longer receives security updates. Several NuGet packages are deprecated or incompatible with newer .NET versions, and source code (Program.cs, Startup.cs) uses obsolete hosting APIs that must be modernized. This upgrade is a prerequisite for all subsequent Azure service migrations.",
+      "requirements": "Upgrade target framework from netcoreapp2.0 to net10.0 for both src/ReadingTimeDemo and test/ReadingTimeDemo.UnitTests projects. Update or remove NuGet packages that are now included in the framework reference (e.g., Microsoft.AspNetCore.* packages). Resolve source incompatibilities in Program.cs and Startup.cs by adopting the modern minimal hosting model (WebApplication.CreateBuilder). Replace deprecated packages with their supported equivalents. Ensure the project builds and all existing tests pass after the upgrade. Addresses assessment issues: Out of support .NET target framework is detected, NuGet package functionality is included with framework reference, Project's target framework(s) needs to be changed, Source incompatible for selected .NET version, NuGet package upgrade is recommended, Behavioral change in selected .NET version, NuGet package is deprecated, Local or network IO operations detected (Directory.GetCurrentDirectory() is resolved as part of the modern hosting refactor).",
+      "status": "success",
+      "taskSummary": "Upgraded from netcoreapp2.0 to net10.0. Rewrote Program.cs using minimal hosting model (WebApplication.CreateBuilder), deleted Startup.cs. Removed 11 framework-included NuGet packages, updated ApplicationInsights to 2.22.0, updated test project packages. Build passes with 0 errors/warnings. 14/14 unit tests pass.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "type": "transform",
+      "id": "002-transform-appsettings-to-azure-app-config",
+      "description": "Migrate non-secret application settings from appsettings.json to Azure App Configuration, so the application reads its configuration from a centralized, cloud-managed store at runtime.",
+      "reason": "The application currently reads configuration exclusively from local appsettings.json files, which is a cloud-readiness concern flagged by the assessment. Externalizing configuration to Azure App Configuration enables environment-agnostic deployments, centralized management, and reduces configuration drift across environments.",
+      "requirements": "Move non-secret settings from appsettings.json (and appsettings.{Environment}.json if present) into Azure App Configuration. Preserve the existing IConfiguration / IOptions<T> shape so that consuming code requires no changes. Use Managed Identity for authentication to Azure App Configuration. Emit a .azure/configuration-migration.json seed file for the deployment agent to use when provisioning the App Configuration store. Ensure environment variables remain as a fallback configuration source. Addresses assessment issues: Local application configuration detected.",
+      "dependencies": [
+        "001-upgrade-dotnet"
+      ],
+      "skills": [
+        {
+          "name": "migration-local-appsettings-azure-app-configuration",
+          "location": "builtin"
+        }
+      ],
+      "status": "success",
+      "taskSummary": "Added Azure App Configuration SDK provider (Microsoft.Extensions.Configuration.AzureAppConfiguration v8.5.0 and Microsoft.Azure.AppConfiguration.AspNetCore v8.5.0) with DefaultAzureCredential (Managed Identity). Program.cs conditionally wires the provider when AZURE_APP_CONFIGURATION_ENDPOINT env var is set; falls back to appsettings.json + env vars when not set. Emitted .azure/configuration-migration.json seed file (empty keyValues \u2014 only settings present were Logging (runtime-host concern, excluded) and ApplicationInsights:InstrumentationKey (API key, excluded per skill guidance)). IConfiguration/IOptions<T> shape unchanged. Build: 0 errors, 0 warnings. Tests: 14/14 passed.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "type": "transform",
+      "id": "003-transform-static-content-to-azure-blob",
+      "description": "Migrate static web content (images, CSS, JavaScript) from the local wwwroot directory to Azure Blob Storage, and update the application to serve these assets from blob storage.",
+      "reason": "The application currently bundles static content in the container image (wwwroot), which is flagged as a cloud-readiness concern. Serving static assets from Azure Blob Storage improves scalability, reduces container image size, and enables CDN-backed delivery.",
+      "requirements": "Move static assets from wwwroot to an Azure Blob Storage container. Update the application to reference assets from Azure Blob Storage URLs instead of local paths. Use Managed Identity (DefaultAzureCredential) for authentication to Azure Blob Storage. Ensure existing views and controllers that reference static content are updated accordingly. Addresses assessment issues: Static content detected.",
+      "dependencies": [
+        "001-upgrade-dotnet"
+      ],
+      "skills": [
+        {
+          "name": "migration-azure-storage-blob",
+          "location": "builtin"
+        }
+      ],
+      "status": "success",
+      "taskSummary": "Added Azure Blob Storage integration (Azure.Storage.Blobs 12.28.0) with Managed Identity (DefaultAzureCredential). Created IBlobStorageService/BlobStorageService singleton for URL generation. Registered BlobServiceClient via AddAzureClients reading Storage config section. Updated views (Book/Index.cshtml, Home/Index.cshtml, Shared/_Layout.cshtml) to inject IBlobStorageService and use GetStaticAssetUrl(). Added Storage section to appsettings.json. Build: 0 errors. Tests: 14/14 passed.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "type": "deployment",
+      "id": "004-deployment-azure-container-apps",
+      "description": "Containerize the ReadingTimeDemo application and deploy it to Azure Container Apps.",
+      "reason": "The application needs to be deployed to Azure for cloud-native hosting. Azure Container Apps provides a serverless container platform with built-in scaling, Managed Identity support, and seamless integration with Azure services provisioned in previous tasks.",
+      "requirements": "Generate a Dockerfile for the ReadingTimeDemo ASP.NET Core application targeting .NET 10. Build and push the container image to Azure Container Registry. Deploy the application to Azure Container Apps using Bicep for infrastructure provisioning. Configure Managed Identity on the Container App so it can authenticate to Azure App Configuration and Azure Blob Storage. Set required environment variables for Azure service endpoints.",
+      "dependencies": [
+        "001-upgrade-dotnet",
+        "002-transform-appsettings-to-azure-app-config",
+        "003-transform-static-content-to-azure-blob"
+      ],
+      "targetAzureService": "Azure Container Apps",
+      "resourceStatus": "Create new service",
+      "deploymentTool": "bicep",
+      "status": "success",
+      "taskSummary": "Generated Dockerfile (.NET 10, non-root user, HEALTHCHECK, port 8080) and .dockerignore. Generated modular Bicep IaC (identity, registry, loganalytics, appinsights, keyvault, appconfig, storage, containerappenv, containerapp modules) with User-Assigned Managed Identity for all service auth. Created deploy scripts (infra/deploy.sh, infra/deploy.ps1, deploy-scripts/deploy-app.sh). Azure provisioning requires Contributor role on subscription before running deploy.sh.",
+      "skills": [
+        {
+          "name": "azcli-containerapp-deploy",
+          "location": "builtin"
+        }
+      ]
+    }
+  ]
+}
