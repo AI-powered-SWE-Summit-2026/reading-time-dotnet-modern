@@ -1,0 +1,1048 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-06-11T09:55:00.891291Z",
+  "analysisEndTime": "2026-06-11T09:55:03.677233Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 2,
+      "issues": 6,
+      "incidents": 38,
+      "effort": 38
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 9,
+        "Optional": 15,
+        "Potential": 14,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 28,
+        "Project": 2,
+        "Api": 8
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+      "startingProject": true,
+      "issues": 6,
+      "storyPoints": 33,
+      "properties": {
+        "appName": "ReadingTimeDemo",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "netcoreapp2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 69,
+        "numberOfCodeFiles": 14,
+        "linesTotal": 25620,
+        "linesOfCode": 465,
+        "totalApiScanned": 215,
+        "minLinesOfCodeToChange": 8,
+        "maxLinesOfCodeToChange": 8
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "828e7b72-16a1-48cf-8700-b60d79cc537a",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Diagnostics 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2a095d31-b495-47d6-9209-e95c3fd10409",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Mvc 2.0.3",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc",
+              "PackageVersion": "2.0.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b5f00765-8afe-497a-8574-2ece0fd58b8c",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Server.IISIntegration 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Server.IISIntegration",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "784790fd-8d8d-4b0e-82d1-9b2c724e04a6",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.Server.Kestrel 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Server.Kestrel",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "87e60353-3c8e-49c8-9c86-15e7c07396ed",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.AspNetCore.StaticFiles 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.StaticFiles",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "66795aec-b936-4ec3-9812-ddc0ba2c0cbc",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.9",
+              "protected": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.9",
+            "label": "Microsoft.Extensions.Configuration.EnvironmentVariables 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": "10.0.9",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5a591b6b-bb3d-4835-967d-2af0134cb896",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json 10.0.9",
+              "protected": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json 10.0.9",
+            "label": "Microsoft.Extensions.Configuration.Json 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Configuration.Json",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": "10.0.9",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "724290c1-91f6-4a02-b866-cb458e844b18",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging 10.0.9",
+              "protected": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging 10.0.9",
+            "label": "Microsoft.Extensions.Logging 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": "10.0.9",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2fc20cca-c165-426f-af92-174f85f679fa",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.9",
+              "protected": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console 10.0.9",
+            "label": "Microsoft.Extensions.Logging.Console 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Console",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": "10.0.9",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "38f5af35-52e2-4b95-b737-509402790b17",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.9",
+              "protected": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.9",
+            "label": "Microsoft.Extensions.Logging.Debug 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Debug",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": "10.0.9",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "eeadc9a3-f420-43f8-a260-147e5742c6d5",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.9",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions 10.0.9",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": "10.0.9",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "dec39055-900e-435f-b879-3957e855128f",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.BrowserLink, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.VisualStudio.Web.BrowserLink, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.BrowserLink, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.BrowserLink, 2.0.2\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.VisualStudio.Web.BrowserLink 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Web.BrowserLink",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "58397037-6ddf-442b-b7df-711e304ad36d",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2",
+              "protected": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2",
+            "protectedSnippet": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2",
+            "label": "Microsoft.ApplicationInsights.AspNetCore 2.2.1",
+            "properties": {
+              "PackageId": "Microsoft.ApplicationInsights.AspNetCore",
+              "PackageVersion": "2.2.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "75f26cf4-d299-4028-8a8d-318e7946cd8c",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Diagnostics, and replace with new package Microsoft.AspNetCore.Diagnostics, 2.3.11",
+              "protected": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Diagnostics, and replace with new package Microsoft.AspNetCore.Diagnostics, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Diagnostics, and replace with new package Microsoft.AspNetCore.Diagnostics, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Diagnostics, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Diagnostics, and replace with new package Microsoft.AspNetCore.Diagnostics, 2.3.11",
+            "label": "Microsoft.AspNetCore.Diagnostics 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4fcc84a2-799b-4383-b79b-5bea3c5b8810",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Mvc, and replace with new package Microsoft.AspNetCore.Mvc, 2.3.11",
+              "protected": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Mvc, and replace with new package Microsoft.AspNetCore.Mvc, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Mvc, and replace with new package Microsoft.AspNetCore.Mvc, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc, 2.0.3\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Mvc, and replace with new package Microsoft.AspNetCore.Mvc, 2.3.11",
+            "label": "Microsoft.AspNetCore.Mvc 2.0.3",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc",
+              "PackageVersion": "2.0.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "68dc4de3-a1d2-49f9-99b6-e352a2187414",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.IISIntegration, and replace with new package Microsoft.AspNetCore.Server.IISIntegration, 2.3.11",
+              "protected": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.IISIntegration, and replace with new package Microsoft.AspNetCore.Server.IISIntegration, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.IISIntegration, and replace with new package Microsoft.AspNetCore.Server.IISIntegration, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Server.IISIntegration, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.IISIntegration, and replace with new package Microsoft.AspNetCore.Server.IISIntegration, 2.3.11",
+            "label": "Microsoft.AspNetCore.Server.IISIntegration 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Server.IISIntegration",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "725f722f-e352-420d-8d91-92679bc65c92",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.Kestrel, and replace with new package Microsoft.AspNetCore.Server.Kestrel, 2.3.11",
+              "protected": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.Kestrel, and replace with new package Microsoft.AspNetCore.Server.Kestrel, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.Kestrel, and replace with new package Microsoft.AspNetCore.Server.Kestrel, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.Server.Kestrel, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.Server.Kestrel, and replace with new package Microsoft.AspNetCore.Server.Kestrel, 2.3.11",
+            "label": "Microsoft.AspNetCore.Server.Kestrel 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Server.Kestrel",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "13515e49-b5e6-4160-80b8-6431e7dbc653",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.StaticFiles, and replace with new package Microsoft.AspNetCore.StaticFiles, 2.3.11",
+              "protected": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.StaticFiles, and replace with new package Microsoft.AspNetCore.StaticFiles, 2.3.11"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.StaticFiles, and replace with new package Microsoft.AspNetCore.StaticFiles, 2.3.11",
+            "protectedSnippet": "Microsoft.AspNetCore.StaticFiles, 2.0.2\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.StaticFiles, and replace with new package Microsoft.AspNetCore.StaticFiles, 2.3.11",
+            "label": "Microsoft.AspNetCore.StaticFiles 2.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.StaticFiles",
+              "PackageVersion": "2.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f4742eee-e4b1-45d8-97e0-8abdda047202",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables, 10.0.9",
+              "protected": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables, 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables, 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Configuration.EnvironmentVariables, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.EnvironmentVariables, and replace with new package Microsoft.Extensions.Configuration.EnvironmentVariables, 10.0.9",
+            "label": "Microsoft.Extensions.Configuration.EnvironmentVariables 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "475b4745-1229-422a-b6c4-aa4c71072627",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json, 10.0.9",
+              "protected": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json, 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json, 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Configuration.Json, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Configuration.Json, and replace with new package Microsoft.Extensions.Configuration.Json, 10.0.9",
+            "label": "Microsoft.Extensions.Configuration.Json 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Configuration.Json",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4d8701dd-abaa-49a7-b4d4-c14693e2b565",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging, 10.0.9",
+              "protected": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging, 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging, 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Logging, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging, and replace with new package Microsoft.Extensions.Logging, 10.0.9",
+            "label": "Microsoft.Extensions.Logging 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9ef621db-90a7-453f-a391-2fbd2802e0dc",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console, 10.0.9",
+              "protected": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console, 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console, 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Console, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Console, and replace with new package Microsoft.Extensions.Logging.Console, 10.0.9",
+            "label": "Microsoft.Extensions.Logging.Console 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Console",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "87d00653-06fd-45e0-9b5e-219cebe6b118",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug, 10.0.9",
+              "protected": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug, 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug, 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Debug, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug, 10.0.9",
+            "label": "Microsoft.Extensions.Logging.Debug 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Debug",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7e03c90b-43b0-4ff4-80ac-f80e342081f6",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions, 10.0.9",
+              "protected": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions, 10.0.9"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions, 10.0.9",
+            "protectedSnippet": "Microsoft.Extensions.Options.ConfigurationExtensions, 2.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.Extensions.Options.ConfigurationExtensions, and replace with new package Microsoft.Extensions.Options.ConfigurationExtensions, 10.0.9",
+            "label": "Microsoft.Extensions.Options.ConfigurationExtensions 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Options.ConfigurationExtensions",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "36960595-e9a8-4794-a533-8cb0454a52b0",
+          "ruleId": "Project.0002",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+            "snippet": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "netcoreapp2.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "081b7d79-9e71-462e-968f-804028184a74",
+          "ruleId": "Api.0002",
+          "description": "This type is obsolete and will be removed in a future version. The recommended alternative is Microsoft.AspNetCore.Hosting.IWebHostEnvironment. Microsoft.Extensions.Hosting",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Startup.cs",
+            "snippet": "public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment",
+            "label": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment",
+            "line": 36,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f78ca579-1321-460f-a498-0d6f3d65dd15",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Home/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Startup.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Home/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 48,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "46d3d724-4235-4a0e-a75f-be3aca19dea0",
+          "ruleId": "Api.0002",
+          "description": "This method is retained only for compatibility. The recommended alternative is AddDebug(this ILoggingBuilder builder).",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "loggerFactory.AddDebug();",
+              "protected": "M:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug(Microsoft.Extensions.Logging.ILoggerFactory)"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Startup.cs",
+            "snippet": "loggerFactory.AddDebug();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug(Microsoft.Extensions.Logging.ILoggerFactory)",
+            "label": "M:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug(Microsoft.Extensions.Logging.ILoggerFactory)",
+            "line": 39,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "6a0104e1-5fd9-46d0-8d5b-6df061cc4c8f",
+          "ruleId": "Api.0002",
+          "description": "This method is retained only for compatibility. The recommended alternative is AddConsole(this ILoggingBuilder builder).",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "loggerFactory.AddConsole(Configuration.GetSection(\u0022Logging\u0022));",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Startup.cs",
+            "snippet": "loggerFactory.AddConsole(Configuration.GetSection(\u0022Logging\u0022));",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.Extensions.Configuration.IConfiguration)",
+            "line": 38,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "bd884ec3-7372-4676-b5b1-144d36373d6a",
+          "ruleId": "Api.0002",
+          "description": "This type is obsolete and will be removed in a future version. The recommended alternative is Microsoft.AspNetCore.Hosting.IWebHostEnvironment. Microsoft.Extensions.Hosting",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public Startup(IHostingEnvironment env)\n        {\n            var builder = new ConfigurationBuilder()\n                .SetBasePath(env.ContentRootPath)\n                .AddJsonFile(\u0022appsettings.json\u0022, optional: true, reloadOnChange: true)\n                .AddJsonFile($\u0022appsettings.{env.EnvironmentName}.json\u0022, optional: true)\n                .AddEnvironmentVariables();\n\n            if (env.IsDevelopment())\n            {\n                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.\n                builder.AddApplicationInsightsSettings(developerMode: true);\n            }\n            Configuration = builder.Build();\n        }",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Startup.cs",
+            "snippet": "public Startup(IHostingEnvironment env)\n        {\n            var builder = new ConfigurationBuilder()\n                .SetBasePath(env.ContentRootPath)\n                .AddJsonFile(\u0022appsettings.json\u0022, optional: true, reloadOnChange: true)\n                .AddJsonFile($\u0022appsettings.{env.EnvironmentName}.json\u0022, optional: true)\n                .AddEnvironmentVariables();\n\n            if (env.IsDevelopment())\n            {\n                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.\n                builder.AddApplicationInsightsSettings(developerMode: true);\n            }\n            Configuration = builder.Build();\n        }",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment",
+            "label": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment",
+            "line": 10,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "56265379-d9ba-4eb7-aeec-d8a0617da0c7",
+          "ruleId": "Api.0002",
+          "description": "This type is obsolete and will be removed in a future version. The recommended alternative is Microsoft.AspNetCore.Hosting.IWebHostEnvironment. Microsoft.Extensions.Hosting",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public Startup(IHostingEnvironment env)\n        {\n            var builder = new ConfigurationBuilder()\n                .SetBasePath(env.ContentRootPath)\n                .AddJsonFile(\u0022appsettings.json\u0022, optional: true, reloadOnChange: true)\n                .AddJsonFile($\u0022appsettings.{env.EnvironmentName}.json\u0022, optional: true)\n                .AddEnvironmentVariables();\n\n            if (env.IsDevelopment())\n            {\n                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.\n                builder.AddApplicationInsightsSettings(developerMode: true);\n            }\n            Configuration = builder.Build();\n        }",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Startup.cs",
+            "snippet": "public Startup(IHostingEnvironment env)\n        {\n            var builder = new ConfigurationBuilder()\n                .SetBasePath(env.ContentRootPath)\n                .AddJsonFile(\u0022appsettings.json\u0022, optional: true, reloadOnChange: true)\n                .AddJsonFile($\u0022appsettings.{env.EnvironmentName}.json\u0022, optional: true)\n                .AddEnvironmentVariables();\n\n            if (env.IsDevelopment())\n            {\n                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.\n                builder.AddApplicationInsightsSettings(developerMode: true);\n            }\n            Configuration = builder.Build();\n        }",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment",
+            "label": "T:Microsoft.AspNetCore.Hosting.IHostingEnvironment",
+            "line": 10,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "51d15292-1a45-47c5-b709-df7424680aa3",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var host = new WebHostBuilder()\n                .UseKestrel()\n                .UseContentRoot(Directory.GetCurrentDirectory())\n                .UseIISIntegration()\n                .UseStartup\u003CStartup\u003E()\n                .Build();",
+              "protected": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Program.cs",
+            "snippet": "var host = new WebHostBuilder()\n                .UseKestrel()\n                .UseContentRoot(Directory.GetCurrentDirectory())\n                .UseIISIntegration()\n                .UseStartup\u003CStartup\u003E()\n                .Build();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder",
+            "label": "T:Microsoft.AspNetCore.Hosting.WebHostBuilder",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 9,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e3deeac7-e953-46c8-ad12-f8f017bff805",
+          "ruleId": "Api.0002",
+          "description": "WebHostBuilder, IWebHost, and WebHost are obsolete ",
+          "projectPath": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var host = new WebHostBuilder()\n                .UseKestrel()\n                .UseContentRoot(Directory.GetCurrentDirectory())\n                .UseIISIntegration()\n                .UseStartup\u003CStartup\u003E()\n                .Build();",
+              "protected": "T:Microsoft.AspNetCore.Hosting.IWebHost"
+            },
+            "kind": "File",
+            "path": "src/ReadingTimeDemo/Program.cs",
+            "snippet": "var host = new WebHostBuilder()\n                .UseKestrel()\n                .UseContentRoot(Directory.GetCurrentDirectory())\n                .UseIISIntegration()\n                .UseStartup\u003CStartup\u003E()\n                .Build();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "label": "T:Microsoft.AspNetCore.Hosting.IWebHost",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/webhostbuilder-deprecated.md",
+                "isCustom": false
+              }
+            ],
+            "line": 9,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 5,
+      "properties": {
+        "appName": "ReadingTimeDemo.UnitTests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "netcoreapp2.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 3183,
+        "linesOfCode": 143,
+        "totalApiScanned": 140,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "025f2b9c-402d-4316-99ff-f0fe3953c495",
+          "ruleId": "NuGet.0003",
+          "projectPath": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Runtime.Serialization.Primitives, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Runtime.Serialization.Primitives, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+            "snippet": "System.Runtime.Serialization.Primitives, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Runtime.Serialization.Primitives, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Runtime.Serialization.Primitives 4.3.0",
+            "properties": {
+              "PackageId": "System.Runtime.Serialization.Primitives",
+              "PackageVersion": "4.3.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d9d11b10-03bd-4755-8bc2-706154e99143",
+          "ruleId": "NuGet.0005",
+          "projectPath": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2",
+              "protected": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2"
+            },
+            "kind": "File",
+            "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+            "snippet": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2",
+            "protectedSnippet": "Microsoft.ApplicationInsights.AspNetCore, 2.2.1\n\nRecommendation:\n\nThis version is deprecated. Please use the most recent version.\nRemove Microsoft.ApplicationInsights.AspNetCore, and replace with new package Microsoft.ApplicationInsights.AspNetCore, 3.1.2",
+            "label": "Microsoft.ApplicationInsights.AspNetCore 2.2.1",
+            "properties": {
+              "PackageId": "Microsoft.ApplicationInsights.AspNetCore",
+              "PackageVersion": "2.2.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6a214cd8-90a1-49df-bd76-22946f53b1af",
+          "ruleId": "NuGet.0005",
+          "projectPath": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+            "snippet": "xunit, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.3.1",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "39bf6e1c-110f-417d-ac45-4f50a8e3df40",
+          "ruleId": "NuGet.0005",
+          "projectPath": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.console, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3",
+              "protected": "xunit.runner.console, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3"
+            },
+            "kind": "File",
+            "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+            "snippet": "xunit.runner.console, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3",
+            "protectedSnippet": "xunit.runner.console, 2.3.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3",
+            "label": "xunit.runner.console 2.3.1",
+            "properties": {
+              "PackageId": "xunit.runner.console",
+              "PackageVersion": "2.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1590790d-f54b-4ff3-83e9-4ff282531817",
+          "ruleId": "Project.0002",
+          "projectPath": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+            "snippet": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: netcoreapp2.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "netcoreapp2.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "isFeature": false,
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    }
+  }
+}

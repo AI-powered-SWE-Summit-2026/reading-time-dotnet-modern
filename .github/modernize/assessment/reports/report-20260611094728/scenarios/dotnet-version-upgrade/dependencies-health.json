@@ -1,0 +1,859 @@
+{
+  "packageGovernance": {
+    "totalDistinctPackages": 22,
+    "totalVersionDriftInstances": 0,
+    "targetFramework": "net10.0",
+    "packages": [
+      {
+        "name": "coverlet.msbuild",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.ApplicationInsights.AspNetCore",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "2.2.1",
+            "projects": [
+              "ReadingTimeDemo",
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.Diagnostics",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "2.0.2",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "2.0.3",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.IISIntegration",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "2.0.2",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.Kestrel",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "2.0.2",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.AspNetCore.StaticFiles",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "2.0.2",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.9",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.9"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Json",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.9",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.9"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Logging",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.9",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.9"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Console",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.9",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.9"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Debug",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.9",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.9"
+        }
+      },
+      {
+        "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.9",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "2.0.1",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.9"
+        }
+      },
+      {
+        "name": "Microsoft.NET.Test.Sdk",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "15.7.0",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.NETCore.App",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.0",
+            "projects": [
+              "ReadingTimeDemo",
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "Microsoft.VisualStudio.Web.BrowserLink",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "2.0.2",
+            "projects": [
+              "ReadingTimeDemo"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "MSTest.TestAdapter",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.2.0",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "MSTest.TestFramework",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.2.0",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "System.Runtime.Serialization.Primitives",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "NuGet package functionality is included with framework reference",
+        "versions": [
+          {
+            "version": "4.3.0",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "xunit",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "2.3.1",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "xunit.runner.console",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "2.3.1",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      },
+      {
+        "name": "xunit.runner.visualstudio",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.3.1",
+            "projects": [
+              "ReadingTimeDemo.UnitTests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": ""
+        }
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "ReadingTimeDemo",
+      "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "netcoreapp2.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Microsoft.NETCore.App",
+            "version": "2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": true,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.ApplicationInsights.AspNetCore",
+            "version": "2.2.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.Diagnostics",
+            "version": "2.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.Mvc",
+            "version": "2.0.3",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.Server.IISIntegration",
+            "version": "2.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.Server.Kestrel",
+            "version": "2.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.AspNetCore.StaticFiles",
+            "version": "2.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.9",
+            "upgrade": {
+              "newVersion": "10.0.9"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.Json",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.9",
+            "upgrade": {
+              "newVersion": "10.0.9"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.Logging",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.9",
+            "upgrade": {
+              "newVersion": "10.0.9"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Console",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.9",
+            "upgrade": {
+              "newVersion": "10.0.9"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Debug",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.9",
+            "upgrade": {
+              "newVersion": "10.0.9"
+            }
+          },
+          {
+            "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.9",
+            "upgrade": {
+              "newVersion": "10.0.9"
+            }
+          },
+          {
+            "name": "Microsoft.VisualStudio.Web.BrowserLink",
+            "version": "2.0.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "src/ReadingTimeDemo/ReadingTimeDemo.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    },
+    {
+      "name": "ReadingTimeDemo.UnitTests",
+      "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "netcoreapp2.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Microsoft.NETCore.App",
+            "version": "2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": true,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.ApplicationInsights.AspNetCore",
+            "version": "2.2.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.NET.Test.Sdk",
+            "version": "15.7.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "xunit.runner.visualstudio",
+            "version": "2.3.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "System.Runtime.Serialization.Primitives",
+            "version": "4.3.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "NuGet package functionality is included with framework reference",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "xunit",
+            "version": "2.3.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "MSTest.TestAdapter",
+            "version": "1.2.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "MSTest.TestFramework",
+            "version": "1.2.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "xunit.runner.console",
+            "version": "2.3.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "coverlet.msbuild",
+            "version": "2.0.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "test/ReadingTimeDemo.UnitTests/ReadingTimeDemo.UnitTests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [
+          {
+            "name": "ReadingTimeDemo",
+            "isTransitive": true,
+            "compatibility": "valid"
+          }
+        ],
+        "frameworkReferences": []
+      }
+    }
+  ]
+}
