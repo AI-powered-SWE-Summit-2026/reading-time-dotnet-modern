@@ -71,7 +71,13 @@
           "location": "builtin"
         }
       ],
-      "status": "done",
+      "status": "success",
+      "taskSummary": "Added Azure Blob Storage integration (Azure.Storage.Blobs 12.28.0) with Managed Identity (DefaultAzureCredential). Created IBlobStorageService/BlobStorageService singleton for URL generation. Registered BlobServiceClient via AddAzureClients reading Storage config section. Updated views (Book/Index.cshtml, Home/Index.cshtml, Shared/_Layout.cshtml) to inject IBlobStorageService and use GetStaticAssetUrl(). Added Storage section to appsettings.json. Build: 0 errors. Tests: 14/14 passed.",
+      "successCriteriaStatus": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true"
+      },
       "successCriteria": {
         "passBuild": "true",
         "generateNewUnitTests": "false",
@@ -92,6 +98,8 @@
       "targetAzureService": "Azure Container Apps",
       "resourceStatus": "Create new service",
       "deploymentTool": "bicep",
+      "status": "success",
+      "taskSummary": "Generated Dockerfile (.NET 10, non-root user, HEALTHCHECK, port 8080) and .dockerignore. Generated modular Bicep IaC (identity, registry, loganalytics, appinsights, keyvault, appconfig, storage, containerappenv, containerapp modules) with User-Assigned Managed Identity for all service auth. Created deploy scripts (infra/deploy.sh, infra/deploy.ps1, deploy-scripts/deploy-app.sh). Azure provisioning requires Contributor role on subscription before running deploy.sh.",
       "skills": [
         {
           "name": "azcli-containerapp-deploy",
